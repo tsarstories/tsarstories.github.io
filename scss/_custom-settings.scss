@@ -1,0 +1,200 @@
+// Import font(s) from google.
+
+// for moveable
+/*
+==============================================
+Fonts Installation
+==============================================
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Droid+Serif';
+
+@font-face {
+  font-family: 'Bodoni';
+  src: url('//static1.squarespace.com/static/543870a5e4b0a877b5a652d9/t/57dad241414fb5d694751ab7/1473958465275/BodoniFLF-Roman.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bodoni Bold';
+  src: url('//static1.squarespace.com/static/543870a5e4b0a877b5a652d9/t/57dad236414fb5d694751a44/1473958454896/BodoniFLF-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bodoni Italic';
+  src: url('//static1.squarespace.com/static/543870a5e4b0a877b5a652d9/t/57dad23b414fb5d694751a73/1473958460144/BodoniFLF-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Bodoni Bold Italic';
+  src: url('//static1.squarespace.com/static/543870a5e4b0a877b5a652d9/t/57dad231414fb5d694751a13/1473958449544/BodoniFLF-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+/*
+==============================================
+Variables
+==============================================
+*/
+
+//Layout
+
+//Color variables
+$black: #000;
+$light-orange: #ffeecc;
+//Font size variables
+//Typography variables
+
+$main-serif: 'Bodoni Bold', Garamond, 'Times New Roman', serif;
+$paragraph-serif: 'Bodoni Italic', Garamond, 'Times New Roman', serif;
+
+/*
+==============================================
+Mixins
+==============================================
+*/
+
+@mixin absolute($height, $top: 0, $bottom: 0, $left: 0, $right: 0){
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  margin: auto;
+  width: 100%;
+  height: $height
+}
+
+@mixin mainHeading($color: $black) {
+  font-family: $main-serif;
+  font-size: 7vw;
+  color: $color;
+  letter-spacing: -0.02em;
+}
+
+
+
+/*
+==============================================
+Overall styles
+==============================================
+*/
+
+.align-center {
+  text-align: center;
+}
+
+h1 {
+  @include mainHeading;
+}
+
+p {
+  font-family: $paragraph-serif;
+  font-size: 0.8em;
+  font-style: italic;
+  padding-top: 0.5em;
+  letter-spacing: 0.09em;
+}
+.description {
+  display: none;
+}
+.mood-board {
+  width: 100%;
+  height: 100vh;
+  background: $light-orange;
+  position: relative;
+  .title {
+    @include absolute(40vh);
+  }
+  .images {
+    @include absolute(100%, 0, auto, 0, auto );
+    max-height: 100%;
+    overflow: hidden;
+  }
+  .element {
+    &:hover {
+      .description {
+        display: block;
+      }
+    }
+    position: absolute;
+    z-index: 0;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+// og
+
+// Mixins
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon/icomoon.eot?1z9v6x');
+	src:url('../fonts/icomoon/icomoon.eot?1z9v6x#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.ttf?1z9v6x') format('truetype'),
+		url('../fonts/icomoon/icomoon.woff?1z9v6x') format('woff'),
+		url('../fonts/icomoon/icomoon.svg?1z9v6x#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin icomoon() {
+	
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+}
+
+@mixin inline-block() {
+	display:inline-block;
+	*display:inline;
+	zoom:1;
+}
+
+// Variables
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+$brand-primary: #000000;
+$brand-secondary: #ddf0f3;
+$brand-black: #000000;
+$brand-darker: #222222;
+$brand-white: #ffffff;
+$brand-dropdown: #FDBE34;
+$brand-body-text-color: #7e8890;
+$brand-heading-text-color: #374252;
+
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 480px;
+
+@mixin gradient($firstcolor, $secondcolor) {
+	background: rgba($firstcolor,1);
+	background: -moz-linear-gradient(left, rgba($firstcolor,1) 0%, rgba($secondcolor,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba($firstcolor,1)), color-stop(100%, rgba($secondcolor,1)));
+	background: -webkit-linear-gradient(left, rgba($firstcolor,1) 0%, rgba($secondcolor,1) 100%);
+	background: -o-linear-gradient(left, rgba($firstcolor,1) 0%, rgba($secondcolor,1) 100%);
+	background: -ms-linear-gradient(left, rgba($firstcolor,1) 0%, rgba($secondcolor,1) 100%);
+	background: linear-gradient(to right, rgba($firstcolor,1) 0%, rgba($secondcolor,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$firstcolor, endColorstr=$secondcolor, GradientType=1 );
+}
+

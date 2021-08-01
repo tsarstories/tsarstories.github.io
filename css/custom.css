@@ -1,0 +1,124 @@
+/* Your custom css code goes here */
+
+/* row css */
+
+/* .row {
+  display: flex;
+} */
+
+.column {
+  flex: 50%;
+}
+
+.skill-set li:hover
+{
+	background: #cfffe5;;
+}
+
+.skill-set li
+{
+	background:rgba(0,0,0,.75);
+	border-radius:5px;
+	color:#ffffff;
+	display:inline-block;
+	list-style:none;
+	margin:15px 15px 0 0;
+	padding:10px;
+	text-align:justify;
+}
+
+.uwu
+{
+    background: #cfffe5;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* for dropdown menu */
+.dropdown {
+  display: block;
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 170%;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+  background: #FFF;
+
+}
+.dropdown:hover .dropdown-content {
+  display: inline-table;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+.dropdown-content a:hover {
+  color: #000000;
+  background-color: #D3D3D3;
+}
+
+.main-resume {
+    position: relative;
+    left: 22%;
+    right: 25%;
+    font-size: 14px;
+    /* top: 50%; */
+}
+
+.titles-resume{
+    position: relative;
+    left: 20%;
+}
+
+.about-res{
+  font-size: 15px;
+}
+
+
+/* line on heading */
+
+.titles-resume-one{
+    /* font-family: sans-serif; */
+    /* margin: 100px auto; */
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    max-width: 600px;
+    position: relative;
+}
+
+.titles-resume-one:before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 2px;
+  background: #000000;
+  left: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.titles-resume-one:after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 2px;
+  background: #000000;
+  right: 0;
+  top: 50%;
+  position: absolute;
+}
+
+.synopsis{
+  font-family: sans-serif;
+}
